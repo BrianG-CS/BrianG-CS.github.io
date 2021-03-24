@@ -1,0 +1,52 @@
+body {
+    background-color:darksalmon;
+}
+
+img[src="images/nameLogo.png"]{
+    width: 30%;
+    padding-top: 20px;
+    position: absolute;
+    -webkit-animation: linear infinite;
+    -webkit-animation-name: run;
+    -webkit-animation-duration: 5s;
+}
+
+@-webkit-keyframes run {
+    0% {
+      left: 15%;
+    }
+    50% {
+      left: 52%;
+    }
+    100% {
+      left: 15%;    
+    }
+  }
+
+
+
+.heads img[src="images/moustache-boi.png"] {
+    width: 10%;
+}
+
+.heads img:first-child { 
+    position: fixed;
+    left: 1%;
+    top: 20px;
+}
+
+
+.heads img:nth-child(2) {
+    position: fixed;
+    left: 87%;
+    top: 20px;
+}
+
+
+.ball-button {
+    position: absolute;
+    margin-top: 500px;
+    margin-left: 45%;
+}
+
+
