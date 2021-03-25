@@ -63,10 +63,26 @@ img[src="images/nameLogo.png"]{
 }
 
 
-.ball-button {
+.welcome-button {
     position: absolute;
     margin-top: 500px;
     margin-left: 45%;
 }
 
+#bouncy {
+  position: absolute;
+  top: 80%;
+  left: 10%;
+  font-size: 20px;
+  background-color: purple;
+  stroke-width: 5px;
+  text-decoration: none;
+  
+}
 
+a {
+  text-decoration: none;
+  color: white;
+  font-family:cursive;
+  text-shadow: 2px black;
+}

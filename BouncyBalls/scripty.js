@@ -52,7 +52,7 @@ class Circle {
                 this.speed += (this.accel * .1);
             }
         }
-        else {
+        else if (this.landed) {
             this.y = wHeight - this.radius + 1;
         }
 
