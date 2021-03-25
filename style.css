@@ -1,5 +1,17 @@
 body {
-    background-color:darksalmon;
+  margin: 0;
+  overflow: hidden;
+  background-color:darksalmon;
+}
+
+
+
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* -1 so that you can click on the button to trigger the function */ 
 }
 
 img[src="images/nameLogo.png"]{
@@ -35,6 +47,14 @@ img[src="images/nameLogo.png"]{
     top: 20px;
 }
 
+.welcome {
+  position: absolute;
+  color: darksalmon;
+  background-color: transparent;
+  margin-top: 40%;
+  margin-left: 37%;
+  font-size: 100px;
+}
 
 .heads img:nth-child(2) {
     position: fixed;
