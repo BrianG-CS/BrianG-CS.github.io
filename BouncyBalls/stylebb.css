@@ -1,0 +1,55 @@
+.body {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+#canvas {
+    top: 0;
+    left: 0;
+    position: absolute;
+    margin: 0px;
+    z-index: -1;
+}
+
+#circleButton {
+    position: fixed;
+    top: 80%;
+    left: 2%;
+    border: none;
+    background-color: darksalmon;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+}
+
+#gravityButton {
+    position: fixed;
+    top: 80%;
+    left: 10%;
+    border: none;
+    background-color: rebeccapurple;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+p {
+    position: absolute;
+    margin: 0;
+    top: 0;
+    left: 50%;
+    font-size: 80px;
+
+}
