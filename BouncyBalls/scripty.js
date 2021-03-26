@@ -84,3 +84,8 @@ function spawnCircle() {
 function gravityToggle() {
     gravity = !gravity;
 }
+
+function clearCanvas() {
+    ctx.clearRect(0, 0, wWidth, wHeight);
+    balls = [];
+}
