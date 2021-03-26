@@ -102,10 +102,10 @@ function updateShape(shape) {
 }
 
 
-function spawnCircle() {
+function spawnCircle(min) {
     let circle = new Circle();
     circle.x = Math.random() * wWidth;
-    circle.y = (Math.random() * wHeight / 2);
+    circle.y = (Math.random() * min);
     circle.speed = 6;
     circle.radius = 50;
     circle.landed = false;
@@ -114,10 +114,10 @@ function spawnCircle() {
 }
 
 
-function spawnSquare() {
+function spawnSquare(min) {
     let square = new Square();
     square.x = Math.random() * wWidth;
-    square.y = (Math.random() * wHeight / 2);
+    square.y = (Math.random() * min);
     square.speed = 6;
     square.width = 100;
     square.landed = false;
@@ -135,4 +135,15 @@ function clearCanvas() {
     ctx.clearRect(0, 0, wWidth, wHeight);
     balls = [];
     squares = [];
+}
+
+
+
+
+
+function spawnBunch() {
+    gravity = true;
+    for(i = 1; i < 30; i++) {
+        spawnCircle(-300);
+    }
 }

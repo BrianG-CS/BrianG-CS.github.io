@@ -37,7 +37,7 @@ img[src="images/nameLogo.png"]{
 
 
 
-.heads img[src="images/moustache-boi.png"] {
+.heads img{
     width: 10%;
 }
 
@@ -51,7 +51,7 @@ img[src="images/nameLogo.png"]{
   position: absolute;
   color: darksalmon;
   background-color: transparent;
-  margin-top: 40%;
+  margin-top: 45%;
   margin-left: 37%;
   font-size: 100px;
 }
