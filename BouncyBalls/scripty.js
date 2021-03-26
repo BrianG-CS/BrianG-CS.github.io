@@ -5,17 +5,22 @@ var wWidth = window.innerWidth;
 var gravity = false;
 var acceleration = 5;
 let balls = [];
+let squares = [];
 ctx.canvas.width = wWidth;
 ctx.canvas.height = wHeight;
-ctx.fillStyle = 'red';
+
 
 
 
 
 function draw() {
-
     ctx.clearRect(0, 0, wWidth, wHeight);
-    balls.forEach(updateShape);
+    if (document.URL.includes("squares")) {
+        squares.forEach(updateShape);
+    }
+    else {
+        balls.forEach(updateShape);
+    }
 }
 setInterval(draw, 10);
 
@@ -56,9 +61,37 @@ class Circle {
             this.y = wHeight - this.radius + 1;
         }
 
-
+        ctx.fillStyle = 'red';
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+        ctx.stroke();
+        ctx.fill();
+    }
+}
+
+
+
+class Square {
+    draw() {
+        if (gravity && !this.landed) {
+            if (this.y + this.width > wHeight) {
+                this.speed = 0;
+                this.accel = 0;
+                this.landed = true;
+            }
+            else {
+                this.y += this.speed;
+                this.speed += (this.accel * .1);
+            }
+        }
+        else if (this.landed) {
+            this.y = wHeight - this.width;
+        }
+
+        ctx.fillStyle = 'green';
+        
+        ctx.fillRect(this.x, this.y, this.width, this.width)
+        ctx.strokeRect(this.x, this.y, this.width, this.width);
         ctx.stroke();
         ctx.fill();
     }
@@ -81,6 +114,19 @@ function spawnCircle() {
 }
 
 
+function spawnSquare() {
+    let square = new Square();
+    square.x = Math.random() * wWidth;
+    square.y = (Math.random() * wHeight / 2);
+    square.speed = 6;
+    square.width = 100;
+    square.landed = false;
+    square.accel = acceleration;
+    squares.push(square);
+
+}
+
+
 function gravityToggle() {
     gravity = !gravity;
 }
@@ -88,4 +134,5 @@ function gravityToggle() {
 function clearCanvas() {
     ctx.clearRect(0, 0, wWidth, wHeight);
     balls = [];
+    squares = [];
 }

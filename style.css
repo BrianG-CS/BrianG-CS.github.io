@@ -80,6 +80,17 @@ img[src="images/nameLogo.png"]{
   
 }
 
+#noBounce {
+  position: absolute;
+  top: 85%;
+  left: 10%;
+  font-size: 20px;
+  background-color: purple;
+  stroke-width: 5px;
+  text-decoration: none;
+  
+}
+
 a {
   text-decoration: none;
   color: white;

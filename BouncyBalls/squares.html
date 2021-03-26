@@ -2,19 +2,20 @@
 <html>
     
     <head>
-        <title>Bounce</title>
+        <title>No Bounce</title>
         <link rel="icon" type="./image/png" href="images/websiteFavicon.png">
         <link rel="stylesheet" href="stylebb.css">
     </head>
 <body>
     <canvas id="canvas" ></canvas>
-    <p>This is bouncy ball simulator.</p>
+    <p id="squareText">This is not a bouncy ball simulator.</p>
     <button type="button" id="homeButton"><a href="/index.html">Home!</a></button>
     <div id="buttonBox">
         
-        <button type="button" id="circleButton" onclick="spawnCircle();">Circle!</button>
+        <button type="button" id="circleButton" onclick="spawnSquare();">Square!</button>
         <button type="button" id="gravityButton" onclick="gravityToggle();">Gravity!</button>
         <button type="button" id="clearButton" onclick="clearCanvas();">Reset!</button>
+        
     </div>
     
     
